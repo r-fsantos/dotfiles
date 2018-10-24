@@ -1,0 +1,13 @@
+venv*
+.dropbox*
+Icon*
+*.log
+.vscode/*
+*DS_Store*
+*.#*
+*#*#
+node_modules/*
+src/db/modules/enterprise/*
+src/mongo-tools*
+*mypy_cache*
+.tags

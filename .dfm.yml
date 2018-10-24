@@ -1,0 +1,28 @@
+---
+always_sync_modules: true
+modules:
+  - repo: https://github.com/robbyrussell/oh-my-zsh
+    link: none
+    pull_only: true
+    location: ~/.oh-my-zsh
+  - repo: keybase://private/chasinglogic/secrets
+    location: ~/.secrets
+  - repo: keybase://private/chasinglogic/personal-infrastructure
+    link: none
+    location: ~/Code/personal-infrastructure
+  - repo: keybase://private/chasinglogic/Notes
+    link: none
+    location: ~/Notes
+  - repo: https://github.com/tmux-plugins/tpm
+    link: none
+    pull_only: true
+    location: ~/.tmux/plugins/tpm
+mappings:
+  - match: ansible
+    skip: true
+  - match: vagrant
+    skip: true
+hooks:
+  after_sync:
+    - chmod 0700 $HOME/.ssh/*
+    - chmod 0600 $HOME/.ssh/*

@@ -1,0 +1,24 @@
+[user]
+	email = chasinglogic@gmail.com
+  name = Mathew Robinson
+	signingkey = A7C57BBF95DE307A
+[push]
+	default = current
+[pull]
+	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[magit]
+	hideCampaign = true
+[core]
+	excludesfile = ~/.gitignore_global
+[commit]
+	verbose = true
+	# gpgsign = true
+[alias]
+	unstage = reset HEAD --
+	amend = commit --amend --no-edit
+	vader = push --force-with-lease

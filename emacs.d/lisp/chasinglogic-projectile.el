@@ -30,7 +30,6 @@
   :diminish projectile-mode
   :config
   (setq projectile-switch-project-action 'projectile-dired)
-  (setq projectile-indexing-method 'turbo-alien)
   (add-to-list 'projectile-globally-ignored-directories "vendor")
   (add-to-list 'projectile-globally-ignored-directories ".venv")
   (defun set-frame-name-to-project ()

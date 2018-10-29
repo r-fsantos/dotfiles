@@ -122,6 +122,11 @@ If SYNC provided will run make command synchronously"
        (concat make-command " &"))
      (format "*%s make output*" (projectile-project-name)))))
 
+(defun chasinglogic-prq ()
+  "Open a pull request on github."
+  (interactive)
+  (shell-command "hub pull-request -m \"$(git log -n 1 --format='%s')\" --browse"))
+
 (provide 'chasinglogic-utils)
 
 ;;; chasinglogic-utils.el ends here

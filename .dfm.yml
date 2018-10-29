@@ -7,12 +7,11 @@ modules:
     location: ~/.oh-my-zsh
   - repo: keybase://private/chasinglogic/secrets
     location: ~/.secrets
-  - repo: keybase://private/chasinglogic/personal-infrastructure
-    link: none
-    location: ~/Code/personal-infrastructure
   - repo: keybase://private/chasinglogic/Notes
     link: none
     location: ~/Notes
+  - repo: git@github.com:chasinglogic/scripts
+    location: ~/.scripts
   - repo: https://github.com/tmux-plugins/tpm
     link: none
     pull_only: true

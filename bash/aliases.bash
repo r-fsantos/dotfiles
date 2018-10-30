@@ -48,13 +48,6 @@ alias p="python"
 alias p3="python3"
 alias ve="python3 -m venv"
 alias venv="python3 -m venv"
-function v() {
-    if [[ -d venv ]]; then
-        source venv/bin/activate
-    elif [[ -d .venv ]]; then
-        source .venv/bin/activate
-    fi
-}
 
 # Systemctl is used too much to sudo that shit.
 alias systemctl="sudo systemctl"

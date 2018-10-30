@@ -17,6 +17,8 @@ modules:
     pull_only: true
     location: ~/.tmux/plugins/tpm
 mappings:
+  - match: vscodeuser
+    dest: ~/.config/Code/User
   - match: ansible
     skip: true
   - match: vagrant

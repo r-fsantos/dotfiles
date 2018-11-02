@@ -35,6 +35,29 @@
   :init
   (load-theme 'spacemacs-light t))
 
+(setq-default chasinglogic-themes '(spacemacs-light spacemacs-dark))
+(setq-default chasinglogic-theme-ind 0)
+
+(defun chasinglogic-next-theme (&optional reverse)
+  "Switch to next theme in my list."
+  (interactive)
+  (setq chasinglogic-theme-ind (if reverse
+                                   (- chasinglogic-theme-ind 1)
+                                 (+ chasinglogic-theme-ind 1)))
+  (when
+      (>= chasinglogic-theme-ind (length chasinglogic-themes))
+    (setq chasinglogic-theme-ind 0))
+  (when
+      (> 0 chasinglogic-theme-ind )
+    (setq chasinglogic-theme-ind
+          (- (length chasinglogic-themes) 1)))
+  (load-theme (elt chasinglogic-themes chasinglogic-theme-ind) t))
+
+(defun chasinglogic-prev-theme ()
+  "Previous theme in my list."
+  (interactive)
+  (chasinglogic-next-theme 1))
+
 (use-package diminish
   :demand
   :config

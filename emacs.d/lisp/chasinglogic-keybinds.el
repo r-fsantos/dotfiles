@@ -105,6 +105,20 @@
    "c" 'magit-commit
    "s" 'magit-status)
 
+  (defvar chasinglogic-shells-map (make-keymap))
+  (general-define-key
+   :keymaps 'chasinglogic-shells-map
+   "x" 'eshell
+   "e" 'magit-stage-file
+   "z" '(lambda () (ansi-term (executable-find "zsh"))))
+
+  (defvar chasinglogic-themes-map (make-keymap))
+  (general-define-key
+   :keymaps 'chasinglogic-themes-map
+   "t" 'counsel-load-theme
+   "n" 'chasinglogic-next-theme
+   "p" 'chasinglogic-prev-theme)
+
   ;; Package keybind changes
   (general-define-key
    :keymaps 'evil-window-map
@@ -145,6 +159,8 @@
    "m"   '(chasinglogic-projectile-make-command :which-key "make")
    "j"   '(:keymap chasinglogic-jump-map :which-key "jump")
    "b"   '(:keymap chasinglogic-buffers-map :which-key "buffers")
+   "x"   '(:keymap chasinglogic-shells-map :which-key "shells")
+   "t"   '(:keymap chasinglogic-themes-map :which-key "themes")
    "f"   '(:keymap chasinglogic-files-map :which-key "files"))
 
   ;; global keybindings

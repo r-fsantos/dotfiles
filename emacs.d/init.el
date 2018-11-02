@@ -106,7 +106,7 @@
 (require 'chasinglogic-web)
 (require 'chasinglogic-go)
 ;; (require 'chasinglogic-cpp)
-;; (require 'chasinglogic-rust)
+(require 'chasinglogic-rust)
 (require 'chasinglogic-vala)
 (require 'chasinglogic-org)
 (require 'chasinglogic-python)

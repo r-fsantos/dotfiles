@@ -87,6 +87,7 @@
   (defvar chasinglogic-misc-map (make-keymap))
   (general-define-key
    :keymaps 'chasinglogic-misc-map
+   "w" 'writeroom-mode
    "b" 'switch-to-buffer
    "y" 'counsel-yank-pop)
 

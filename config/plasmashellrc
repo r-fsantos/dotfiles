@@ -1,0 +1,9 @@
+[PlasmaViews][Panel 3][Horizontal1920]
+thickness=36
+
+[ScreenConnectors]
+0=DP-2
+1=eDP-1
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js

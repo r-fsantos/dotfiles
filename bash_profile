@@ -58,3 +58,4 @@ fi
 source ~/.bashrc
 
 export PATH="$HOME/.cargo/bin:$PATH"
+if [ -e /home/chasinglogic/.nix-profile/etc/profile.d/nix.sh ]; then . /home/chasinglogic/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

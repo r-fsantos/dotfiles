@@ -10,7 +10,7 @@ _k_friendly_name=Accessibility
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
 Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
-_k_friendly_name=KDE Daemon
+_k_friendly_name=System Settings Module
 
 [kded5]
 Show System Activity=Ctrl+Esc,Ctrl+Esc,Show System Activity
@@ -19,11 +19,11 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
-{11a63bdb-dd7d-4eb9-b971-bd6b8b4e5878}=Meta+Shift+Print,none,Take Rectangular Region Screenshot
-{7e7beb8e-dc8b-4fd0-9ceb-50e84c91620d}=Meta+Print,none,Take Active Window Screenshot
-{b4a7e767-5166-41e9-990e-c33658e25266}=Shift+Print,none,Take Full Screen Screenshot
+{607df5e5-4c05-493b-a2b7-36ad5b338ab3}=,none,Start Screenshot Tool
+{71c83d3b-2f5c-4da3-8ca4-a9a3369aa90f}=,none,Take Active Window Screenshot
+{bfd5efac-28e0-43c5-bcf8-42bdfec62e11}=,none,Take Rectangular Region Screenshot
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
-{fde6d189-98c1-4c6d-a030-3b4727f3da8a}=Print,none,Start Screenshot Tool
+{f4af5123-5f38-451b-aca0-0626aaad5c46}=,none,Take Full Screen Screenshot
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -190,7 +190,7 @@ Window to Screen 4=none,none,Window to Screen 4
 Window to Screen 5=none,none,Window to Screen 5
 Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
-_k_friendly_name=KWin
+_k_friendly_name=System Settings
 view_actual_size=Meta+0,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out

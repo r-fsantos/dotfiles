@@ -108,6 +108,7 @@
 ;; (require 'chasinglogic-cpp)
 (require 'chasinglogic-rust)
 (require 'chasinglogic-vala)
+(require 'chasinglogic-java)
 (require 'chasinglogic-org)
 (require 'chasinglogic-python)
 (require 'chasinglogic-markdown)

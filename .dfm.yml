@@ -11,14 +11,13 @@ modules:
     link: none
     location: ~/Notes
   - repo: git@github.com:chasinglogic/scripts
+    link: none
     location: ~/.scripts
   - repo: https://github.com/tmux-plugins/tpm
     link: none
     pull_only: true
     location: ~/.tmux/plugins/tpm
 mappings:
-  - match: vscodeuser
-    dest: ~/.config/Code/User
   - match: ansible
     skip: true
   - match: vagrant

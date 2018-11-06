@@ -8,3 +8,4 @@ emacs.d/elpa/*
 emacs.d/smex-items
 emacs.d/var/*
 emacs.d/recent*
+vscodeuser/workspaceStorage/*

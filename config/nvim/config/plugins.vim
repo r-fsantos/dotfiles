@@ -10,7 +10,6 @@ Plug 'tpope/vim-unimpaired' " Useful navigation bindings for lists
 Plug 'tpope/vim-endwise'    " Add 'end' in ruby and bash scripts smartly
 Plug 'tpope/vim-sleuth'     " Set tabwidth etc based on filetype
 Plug 'tpope/vim-eunuch'     " Useful commands like Rename, Delete, Move, SudoWrite
-Plug 'tpope/vim-markdown'   " Latest markdown syntax highlighting files
 Plug 'tpope/vim-abolish'    " Better abbreviations and Subvert is like fancy
 
 """ Language Support 
@@ -25,7 +24,7 @@ Plug 'alvan/vim-closetag'   " Close (X)HTML tags
 Plug 'w0rp/ale' " Code linting
 
 """ IDE-esque support for various languages
-Plug 'sbdchd/neoformat'              " Format various sources which have a support formatter
+Plug 'sbdchd/neoformat'              " Format various sources which have a supported formatter
 Plug 'fatih/vim-go', { 'for': 'go' } " Better go support
 Plug 'pangloss/vim-javascript'       " Better Javascript
 
@@ -36,14 +35,7 @@ Plug 'altercation/vim-colors-solarized', {'as': 'solarized'}
 Plug 'junegunn/vim-easy-align'
 
 """ Writing
-Plug 'reedes/vim-pencil'      " General vim editing improvements for text documents
-Plug 'reedes/vim-wordy'       " Lightweight way to improve quality of writing
-                              " searching for commonly abused / misused words and
-                              " phrases.
-Plug 'dbmrq/vim-ditto'        " Highlight overused words
 Plug 'junegunn/goyo.vim'      " Distraction free writing like writeroom-mode
-Plug 'reedes/vim-lexical'     " Better spell checking and auto completion for writing
-Plug 'reedes/vim-litecorrect' " Automatic correction of teh spelling errors
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1

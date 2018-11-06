@@ -2,13 +2,23 @@
 Recent Files[$e]=Manhattan_Sunset_by_Giacomo_Ferroni.jpg,file:///usr/share/backgrounds/Manhattan_Sunset_by_Giacomo_Ferroni.jpg
 Recent URLs[$e]=file:///usr/share/backgrounds/
 
+[PlasmaViews][Panel 2][Horizontal1920]
+thickness=36
+
+[PlasmaViews][Panel 2][Horizontal2560]
+thickness=30
+
+[PlasmaViews][Panel 23][Horizontal1920]
+thickness=36
+
 [PlasmaViews][Panel 3][Horizontal1920]
 thickness=24
 
 [ScreenConnectors]
-0=eDP-1
+0=HDMI-0
 1=:0.0
 2=DP-2
+3=DVI-0
 
 [Updates]
 performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js

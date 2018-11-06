@@ -10,7 +10,7 @@ _k_friendly_name=Accessibility
 Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
 Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
 Toggle Touchpad=Touchpad Toggle,Touchpad Toggle,Toggle Touchpad
-_k_friendly_name=System Settings
+_k_friendly_name=KDE Daemon
 
 [kded5]
 Show System Activity=Ctrl+Esc,Ctrl+Esc,Show System Activity
@@ -19,11 +19,11 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
-{607df5e5-4c05-493b-a2b7-36ad5b338ab3}=,none,Start Screenshot Tool
-{71c83d3b-2f5c-4da3-8ca4-a9a3369aa90f}=,none,Take Active Window Screenshot
-{bfd5efac-28e0-43c5-bcf8-42bdfec62e11}=,none,Take Rectangular Region Screenshot
+{0811920a-20dd-4729-90df-8e425dfc8d58}=Meta+Print,none,Take Active Window Screenshot
+{0dd00e07-fcef-4040-9ba4-1abd424e25e8}=Meta+Shift+Print,none,Take Rectangular Region Screenshot
+{1f58697b-66ee-4182-8d91-bb8397062216}=Print,none,Start Screenshot Tool
+{50f089f8-d998-4c4b-ae6b-f3835540a203}=Shift+Print,none,Take Full Screen Screenshot
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
-{f4af5123-5f38-451b-aca0-0626aaad5c46}=,none,Take Full Screen Screenshot
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -225,6 +225,7 @@ activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
+activate widget 24=,none,Activate Application Launcher Widget
 activate widget 4=Alt+F1,none,Activate Application Launcher Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions

@@ -63,3 +63,7 @@ fi
 if [[ "$(which fd)" == *"fd"* ]]; then
     export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 fi
+
+if [[ -f ~/.profile ]]; then
+    source ~/.profile
+fi

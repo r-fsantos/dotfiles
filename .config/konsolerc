@@ -1,5 +1,14 @@
+[Desktop Entry]
+DefaultProfile=chasinglogic.profile
+
+[Favorite Profiles]
+Favorites=
+
 [MainWindow]
 Height 1080=663
-State=AAAA/wAAAAD9AAAAAAAAAoAAAAHCAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPZAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Window-Maximized 1080x1920=true
+
+[Profile Shortcuts]
+Ctrl+D=chasinglogic.profile

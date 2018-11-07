@@ -69,7 +69,7 @@
 
 ;; Font
 (when (display-graphic-p)
-  (set-frame-font "Hack-15" nil t))
+  (set-frame-font "Hack-16" nil t))
 
 (provide 'chasinglogic-gui)
 

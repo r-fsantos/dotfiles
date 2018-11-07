@@ -29,6 +29,10 @@
 (use-package rust-mode
   :mode ("\\.rs\\'" . rust-mode)
   :config
+  (defun enable-rustfmt-on-save ()
+    (rust-enable-format-on-save t))
+  (add-hook 'rust-mode-hook 'enable-rustfmt-on-save)
+
   (setq-default rust-format-on-save t)
   (unless (getenv "RUST_SRC_PATH")
     (exec-path-from-shell-copy-env "RUST_SRC_PATH")))

@@ -1,5 +1,5 @@
 export MONGODB_JIRA_USERNAME="mathew.robinson"
-export MONGODB_DEFAULT_REVIEWERS="brian.mccarthy@10gen.com,zakhar.kleyman@10gen.com,jason.walsh@10gen.com"
+export MONGODB_DEFAULT_REVIEWERS="andrew.morrow@10gen.com"
 
 function cr() {
     flags=(--jira_user=\"$MONGODB_JIRA_USERNAME\" $@)

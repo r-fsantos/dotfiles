@@ -203,5 +203,7 @@
             "token": "system"
         }
     ],
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "editor.fontLigatures": true,
+    "workbench.fontAliasing": "auto"
 }

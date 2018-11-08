@@ -20,7 +20,7 @@ export SCRIPTS_DIR="$HOME/.scripts"
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='emacsclient --tty'
 fi
 
 

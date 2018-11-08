@@ -30,7 +30,7 @@ nmap <Leader>jt :tag
 nmap <Leader>ji :CtrlPTag<CR>
 
 """ Buffers
-nmap <Leader>bb :CtrlPBuffer<CR> 
+nmap <Leader>bb :CtrlPBuffer<CR>
 nmap <Leader>bd :bdelete<CR>
 nmap <Leader>bs :new __scratch__<CR>
 

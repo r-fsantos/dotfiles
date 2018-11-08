@@ -37,25 +37,6 @@
   (unless (getenv "RUST_SRC_PATH")
     (exec-path-from-shell-copy-env "RUST_SRC_PATH")))
 
-(use-package racer
-  :diminish racer-mode
-  :after rust-mode
-  :config
-  (setq-default racer-cmd (executable-find "racer"))
-  (setq-default racer-rust-src-path (getenv "RUST_SRC_PATH"))
-  (add-hook 'rust-mode-hook #'racer-mode)
-  (add-hook 'racer-mode-hook #'eldoc-mode)
-  (add-hook 'racer-mode-hook #'company-mode))
-
-(use-package cargo
-  :diminish cargo-minor-mode
-  :after rust-mode
-  :config (add-hook 'rust-mode-hook 'cargo-minor-mode))
-
-(use-package company-racer
-  :after company-mode
-  :config (add-to-list 'company-backends 'company-racer))
-
 (provide 'chasinglogic-rust)
 
 ;;; chasinglogic-rust.el ends here

@@ -48,12 +48,12 @@
 			     operator
 			     replace))
 
-  (defvar chasinglogic-errors-map (make-keymap))
-  (general-define-key
-   :keymaps 'chasinglogic-errors-map
-   "l" 'flycheck-list-errors
-   "n" 'flycheck-error-list-next-error
-   "p" 'flycheck-error-list-previous-error)
+  ;; (defvar chasinglogic-errors-map (make-keymap))
+  ;; (general-define-key
+  ;;  :keymaps 'chasinglogic-errors-map
+  ;;  "l" 'flycheck-list-errors
+  ;;  "n" 'flycheck-error-list-next-error
+  ;;  "p" 'flycheck-error-list-previous-error)
 
   (defvar chasinglogic-files-map (make-keymap))
   (general-define-key
@@ -106,20 +106,6 @@
    "c" 'magit-commit
    "s" 'magit-status)
 
-  (defvar chasinglogic-shells-map (make-keymap))
-  (general-define-key
-   :keymaps 'chasinglogic-shells-map
-   "x" 'eshell
-   "e" 'magit-stage-file
-   "z" '(lambda () (ansi-term (executable-find "zsh"))))
-
-  (defvar chasinglogic-themes-map (make-keymap))
-  (general-define-key
-   :keymaps 'chasinglogic-themes-map
-   "t" 'counsel-load-theme
-   "n" 'chasinglogic-next-theme
-   "p" 'chasinglogic-prev-theme)
-
   ;; Package keybind changes
   (general-define-key
    :keymaps 'evil-window-map
@@ -131,7 +117,6 @@
   (general-define-key
    :keymaps 'projectile-command-map
    "g" 'counsel-projectile-grep
-   "'" 'chasinglogic/new-projectile-eshell
    "s" 'counsel-projectile-ag)
 
   (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -151,17 +136,15 @@
    "`"   '(shell-pop :which-key "shell popup")
    "TAB" '(chasinglogic-select-last-frame :which-key "select last frame")
    "d"   '(dash-at-point :which-key "lookup docs")
+   "m"   '(chasinglogic-projectile-make-command :which-key "make")
    "w"   '(:keymap evil-window-map :which-key "windows")
    "p"   '(:keymap projectile-command-map :which-key "projectile")
    "q"   '(:keymap chasinglogic-quit-map :which-key "quit")
    "g"   '(:keymap chasinglogic-git-map :which-key "git")
    "r"   '(:keymap chasinglogic-misc-map :which-key "misc")
-   "e"   '(:keymap chasinglogic-errors-map :which-key "errors")
-   "m"   '(chasinglogic-projectile-make-command :which-key "make")
+   ;; "e"   '(:keymap chasinglogic-errors-map :which-key "errors")
    "j"   '(:keymap chasinglogic-jump-map :which-key "jump")
    "b"   '(:keymap chasinglogic-buffers-map :which-key "buffers")
-   "x"   '(:keymap chasinglogic-shells-map :which-key "shells")
-   "t"   '(:keymap chasinglogic-themes-map :which-key "themes")
    "f"   '(:keymap chasinglogic-files-map :which-key "files"))
 
   ;; global keybindings

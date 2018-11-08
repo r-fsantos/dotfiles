@@ -1,9 +1,9 @@
-;;; chasinglogic-python.el --- python configuration
+;;; chasinglogic-ivy.el --- ivy completion configuration
 
 ;; Copyright (C) 2018 Mathew Robinson
 
 ;; Author: Mathew Robinson <chasinglogic@gmail.com>
-;; Created: 24 Aug 2018
+;; Created: 06 Nov 2018
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -26,16 +26,22 @@
 
 ;;; Code:
 
-(setq-default python-shell-interpreter "python3"
-              flycheck-python-pylint-executable "python3")
+;;;; Ivy and Counsel
 
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq-default python-shell-interpreter "/usr/local/bin/python3"
-                flycheck-python-pylint-executable "/usr/local/bin/python3"
-                flycheck-python-pycompile-executable "/usr/local/bin/python3"))
+(use-package ivy :demand
+  :diminish ivy-mode
+  :config
+  (setq ivy-use-virtual-buffers t)
+  (ivy-mode 1))
 
-(add-to-list 'auto-mode-alist '("SCons.*" . python-mode))
+(use-package smex :demand
+  :config
+  (smex-initialize))
 
-(provide 'chasinglogic-python)
+(use-package counsel :demand
+  :diminish counsel-mode
+  :config
+  (counsel-mode 1))
 
-;;; chasinglogic-python.el ends here
+;;; chasinglogic-ivy.el ends here
+(provide 'chasinglogic-ivy)

@@ -5,7 +5,7 @@ alias vgt="vagrant"
 alias emt="emacs -nw"
 alias e="$EDITOR"
 
-alias et="emacsclient --tty --socket-name=terminal"
+alias et="emacsclient --tty"
 alias ec="emacsclient --create-frame --no-wait"
 
 function dotfiles() {

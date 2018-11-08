@@ -77,16 +77,7 @@
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil))))))
 
-(defun chasinglogic-new-projectile-eshell ()
-  "Create a new eshell with workdir set to projectile project root."
-  (interactive)
-  (let ((old-eshell-buffer-name eshell-buffer-name))
-    (setq eshell-buffer-name
-          (concat "*" "eshell-" (projectile-project-name) "*"))
-    (eshell)
-    (setq eshell-buffer-name old-eshell-buffer-name)))
-
-(defun chasinglogic-add-projector-projects-to-projector ()
+(defun chasinglogic-add-projector-projects-to-projectile ()
   "Add projector projects to projectile."
   (interactive)
   (setq

@@ -4,6 +4,9 @@ call plug#begin('~/.vim-plugged')
 """ Fuzzy finding
 Plug 'ctrlpvim/ctrlp.vim'
 
+""" Remember my keybindings
+Plug 'liuchengxu/vim-which-key'
+
 """ Tpope general improvements
 Plug 'tpope/vim-vinegar'    " Netrw improvements
 Plug 'tpope/vim-commentary' " Commenting code
@@ -46,3 +49,20 @@ let g:go_fmt_command = "goimports"
 if executable("fd")
      let g:ctrlp_user_command = 'fd --type f --hidden --follow --exclude .git'
 end
+
+let g:which_key_map = {
+\   'b': { 'name': '+buffers' },
+\   'f': { 'name': '+files' },
+\   'j': { 'name': '+jumps' },
+\   'w': { 'name': '+windows' },
+\   'g': { 'name': '+git' },
+\   'e': { 'name': '+errors' },
+\   'p': { 'name': '+project' },
+\   'x': { 'name': '+terminal' },
+\   'r': { 'name': '+writing' },
+\   's': { 'name': '+system' },
+\   't': { 'name': '+tabs' },
+\   'q': { 'name': 'quit' },
+\ }
+call which_key#register('<Space>', "g:which_key_map")
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>

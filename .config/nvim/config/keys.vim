@@ -66,6 +66,8 @@ nmap <Leader>spu :PlugUpdate<CR>
 nmap <Leader>spg :PlugUpgrade<CR> 
 nmap <Leader>sps :PlugStatus<CR>
 nmap <Leader>spc :PlugClean<CR>
+nmap <Leader>sq  :q<CR>
+nmap <Leader>q  :q<CR>
 
 """ Writing
 nmap <Leader>rm :Goyo<CR>
@@ -80,3 +82,4 @@ nmap ]a <Plug>(ale_next_wrap)
 
 """ Building
 nmap <Leader>m :make 
+

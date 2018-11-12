@@ -5,11 +5,11 @@
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "ctrl+k t",
+            "key": "cmd+k t",
         "command": "workbench.files.action.focusFilesExplorer",
     },
     {
-        "key": "ctrl+k f",
+        "key": "cmd+k f",
         "command": "editor.action.startFindReplaceAction"
     },
     {
@@ -26,11 +26,11 @@
         "command": "workbench.action.terminal.focus"
     },
     {
-        "key": "ctrl+k o",
+        "key": "cmd+k o",
         "command": "outline.focus"
     },
     {
-        "key": "ctrl+k n",
+        "key": "cmd+k n",
         "command": "editor.action.marker.nextInFiles",
         "when": "editorFocus && !editorReadonly"
     },
@@ -40,12 +40,12 @@
         "when": "editorFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+k j",
+        "key": "cmd+k j",
         "command": "editor.foldAll",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+k ctrl+0",
+        "key": "cmd+k ctrl+0",
         "command": "-editor.foldAll",
         "when": "editorTextFocus"
     },

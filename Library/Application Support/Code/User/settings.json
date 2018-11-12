@@ -1,7 +1,7 @@
 {
     // Workbench
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Quiet Light",
+    "workbench.colorTheme": "Default Light+",
     // "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
     "vsicons.dontShowNewVersionMessage": true,
@@ -209,5 +209,6 @@
     ],
     "workbench.activityBar.visible": false,
     "editor.fontLigatures": true,
-    "workbench.fontAliasing": "auto"
+    "workbench.fontAliasing": "auto",
+    "workbench.panel.defaultLocation": "right"
 }

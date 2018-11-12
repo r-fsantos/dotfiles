@@ -26,28 +26,6 @@
 
 ;;; Code:
 
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-
-(use-package spacemacs-theme
-  :defer t
-  :init
-  (load-theme 'spacemacs-light t))
-
-(use-package diminish
-  :demand
-  :config
-  (diminish 'auto-revert-mode)
-  (diminish 'abbrev-mode)
-  (diminish 'global-undo-tree-mode)
-  (diminish 'undo-tree-mode)
-  (diminish 'eldoc-mode))
-
-;; Font
-(when (display-graphic-p)
-  (set-frame-font "Hack-16" nil t))
-
 (provide 'chasinglogic-gui)
 
 ;;; chasinglogic-gui.el ends here

@@ -68,6 +68,10 @@
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before": ["<tab>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
             "before": ["<leader>", "f", "s"],
             "commands": ["workbench.action.files.save"]
         },

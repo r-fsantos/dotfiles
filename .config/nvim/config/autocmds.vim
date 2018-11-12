@@ -6,17 +6,6 @@ augroup autofmt
   autocmd BufWritePre *.rs Neoformat
 augroup END
 
-""" Vim for Writing
-augroup vim_writing
-  autocmd!
-  autocmd FileType rst,markdown,mkd call pencil#init()
-        \ | call lexical#init()
-        \ | call wordy#init()
-        \ | call litecorrect#init()
-        \ | setlocal nonumber
-        \ | DittoOn
-augroup END
-
 """ Terminal stuff
 autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert

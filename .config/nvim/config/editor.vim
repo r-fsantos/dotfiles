@@ -32,7 +32,9 @@ set hidden
 
 """ Ripgrep with vimgrep
 if executable("rg")
-    set grepprg=rg\ --vimgrep
+    set grepprg=rg\ --vimgrep\ --hidden
+else
+    set grepprq=grep\ -R
 endif
 
 """ System clipboard

@@ -118,6 +118,12 @@ If SYNC provided will run make command synchronously"
   (interactive)
   (shell-command "hub pull-request -m \"$(git log -n 1 --format='%s')\" --browse"))
 
+(defun chasinglogic-shell ()
+  "Open my shell in 'ansi-term'."
+  (interactive)
+  (ansi-term "/usr/local/bin/zsh" (when (projectile-project-name)
+                                    (concat (projectile-project-name) "-shell"))))
+
 (provide 'chasinglogic-utils)
 
 ;;; chasinglogic-utils.el ends here

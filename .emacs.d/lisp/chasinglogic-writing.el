@@ -29,7 +29,6 @@
 (use-package writeroom-mode
   :commands (writeroom-mode))
 
-(require 'chasinglogic-flycheck)
 (use-package flycheck-vale
   :demand
   :config

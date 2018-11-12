@@ -26,22 +26,5 @@
 
 ;;; Code:
 
-;;;; Ivy and Counsel
-
-(use-package ivy :demand
-  :diminish ivy-mode
-  :config
-  (setq ivy-use-virtual-buffers t)
-  (ivy-mode 1))
-
-(use-package smex :demand
-  :config
-  (smex-initialize))
-
-(use-package counsel :demand
-  :diminish counsel-mode
-  :config
-  (counsel-mode 1))
-
 ;;; chasinglogic-ivy.el ends here
 (provide 'chasinglogic-ivy)

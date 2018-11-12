@@ -69,7 +69,8 @@
 (use-package dash :demand)
 (use-package exec-path-from-shell :demand
   :config
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "TERM"))
 
 ;;;; Global variables
 
@@ -93,36 +94,136 @@
 ;; delete trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;;; UI/UX
+
 ;; smooth out scrolling
 (setq scroll-step 1)
 (setq scroll-margin 1)
 (setq scroll-conservatively 9999)
 
+;; disable useless chrome
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+
+;; theme
+(use-package spacemacs-theme
+  :defer t
+  :init
+  (load-theme 'spacemacs-light t))
+
+;; hide minor modes from modeline
+(use-package diminish
+  :demand
+  :config
+  (diminish 'auto-revert-mode)
+  (diminish 'abbrev-mode)
+  (diminish 'global-undo-tree-mode)
+  (diminish 'undo-tree-mode)
+  (diminish 'eldoc-mode))
+
+;; Font
+(when (display-graphic-p)
+  (set-frame-font "Hack-16" nil t))
+
 ;; auto pair things
 (electric-pair-mode 1)
+;; highlight parens
+(show-paren-mode 1)
 
+;; Ivy and Counsel
+
+(use-package ivy :demand
+  :diminish ivy-mode
+  :config
+  (setq ivy-use-virtual-buffers t)
+  (ivy-mode 1))
+
+(use-package smex :demand
+  :config
+  (smex-initialize))
+
+(use-package counsel :demand
+  :diminish counsel-mode
+  :config
+  (counsel-mode 1))
+
+;;;; EVIL
 (require 'chasinglogic-evil)
+
+(use-package flycheck
+  :diminish flycheck-mode
+  :demand
+  :init
+  (global-flycheck-mode)
+
+  (defun enable-flyspell ()
+    (flyspell-mode 1))
+
+  (defun enable-flyspell-prog ()
+    (flyspell-prog-mode))
+
+  (add-hook 'text-mode-hook 'enable-flyspell)
+  (add-hook 'prog-mode-hook 'enable-flyspell-prog))
+
+;; my frame management functions
 (require 'chasinglogic-frames)
 (require 'chasinglogic-git)
 (require 'chasinglogic-gui)
 (require 'chasinglogic-ivy)
 (require 'chasinglogic-projectile)
 (require 'chasinglogic-python)
-(require 'chasinglogic-rust)
 (require 'chasinglogic-snippets)
 (require 'chasinglogic-writing)
 ;; (require 'chasinglogic-autocomplete)
-;; (require 'chasinglogic-cpp)
-;; (require 'chasinglogic-flycheck)
-;; (require 'chasinglogic-go)
-;; (require 'chasinglogic-java)
-;; (require 'chasinglogic-markdown)
-;; (require 'chasinglogic-ops)
-;; (require 'chasinglogic-org)
-;; (require 'chasinglogic-powershell)
-;; (require 'chasinglogic-terraform)
-;; (require 'chasinglogic-vala)
 ;; (require 'chasinglogic-web)
+
+;;;; Additional Language Modes
+
+(use-package powershell
+  :commands (powershell-mode)
+  :mode ("\\.ps1\\'" . powershell-mode))
+
+(use-package groovy-mode
+  :mode ("\\.groovy$" "\\.gradle$"))
+
+(use-package yaml-mode
+  :mode ("\\.yaml\\'" "\\.yml\\'"))
+
+(use-package toml-mode
+  :mode ("\\gitconfig\\'" "\\.toml\\'"))
+
+(use-package markdown-mode
+  :mode ("\\.markdown\\'" "\\.md\\'")
+  :config (setq-default markdown-command "pandoc"))
+
+(use-package rust-mode
+  :mode ("\\.rs\\'" . rust-mode)
+  :config
+  (defun enable-rustfmt-on-save ()
+    (rust-enable-format-on-save t))
+  (add-hook 'rust-mode-hook 'enable-rustfmt-on-save)
+
+  (setq-default rust-format-on-save t)
+  (unless (getenv "RUST_SRC_PATH")
+    (exec-path-from-shell-copy-env "RUST_SRC_PATH")))
+
+(use-package json-mode
+  :mode ("\\.json\\'" ".babelrc" ".eslintrc")
+  :config
+  (add-hook 'json-mode-hook 'chasinglogic-js-mode-hook))
+
+;; properly indent case statements
+(c-set-offset 'case-label '+)
+(use-package web-mode
+  :commands (web-mode)
+  :mode ("\\.html?\\'" "\\.tmpl\\'" "\\.css\\'"
+	 "\\.scss\\'" "\\.erb\\'" "\\.djhtml\\'")
+  :config
+  (setq-default web-mode-markup-indent-offset 2
+                web-mode-style-indent-offset 2
+		web-mode-code-indent-offset 2))
+
 
 ;; Always load keybinds last
 (require 'chasinglogic-keybinds)

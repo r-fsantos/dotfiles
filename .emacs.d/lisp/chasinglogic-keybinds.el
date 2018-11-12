@@ -135,7 +135,6 @@
    "'"   '(shell-command :which-key "run command")
    "`"   '(shell-pop :which-key "shell popup")
    "TAB" '(chasinglogic-select-last-frame :which-key "select last frame")
-   "d"   '(dash-at-point :which-key "lookup docs")
    "m"   '(chasinglogic-projectile-make-command :which-key "make")
    "w"   '(:keymap evil-window-map :which-key "windows")
    "p"   '(:keymap projectile-command-map :which-key "projectile")

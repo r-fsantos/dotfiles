@@ -1,3 +1,5 @@
+let g:ale_completion_enabled = 1 " ALE supports LSP client functionality including auto complete
+
 call plug#begin('~/.vim-plugged')
 """ Fuzzy finding
 Plug 'ctrlpvim/ctrlp.vim'
@@ -37,9 +39,6 @@ Plug 'junegunn/vim-easy-align'
 """ Writing
 Plug 'junegunn/goyo.vim'      " Distraction free writing like writeroom-mode
 call plug#end()
-
-let g:deoplete#enable_at_startup = 1
-let g:pencil#autoformat = 0      " 0=disable, 1=enable (def)
 
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"

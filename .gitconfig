@@ -1,24 +1,33 @@
 [user]
-	email = chasinglogic@gmail.com
+  email = chasinglogic@gmail.com
   name = Mathew Robinson
-	signingkey = A7C57BBF95DE307A
+  signingkey = A7C57BBF95DE307A
 [push]
-	default = current
+  default = current
 [pull]
-	default = current
+  default = current
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [magit]
-	hideCampaign = true
+  hideCampaign = true
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
+[stage]
+  verbose = true
 [commit]
-	verbose = true
-	# gpgsign = true
+  verbose = true
+  # gpgsign = true
+[pretty]
+  olcolor = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>
 [alias]
-	unstage = reset HEAD --
-	amend = commit --amend --no-edit
-	vader = push --force-with-lease
+  unstage = reset HEAD --
+  amend = commit --amend --no-edit
+  vader = push --force-with-lease
+  contains = branch -a --contains
+  where = branch -a --contains
+  whereis = branch -a --contains
+  l = log --graph --date-order  --pretty=olcolor
+

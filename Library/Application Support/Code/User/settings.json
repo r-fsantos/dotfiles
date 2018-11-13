@@ -1,7 +1,7 @@
 {
     // Workbench
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Solarized Light",
     // "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
     "vsicons.dontShowNewVersionMessage": true,

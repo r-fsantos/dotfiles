@@ -132,10 +132,12 @@
    :states '(normal)
    :keymaps 'override
    "SPC" 'counsel-M-x
-   "'"   '(shell-command :which-key "run command")
+   "'"   '(chasinglogic-shell :which-key "run terminal")
+   "x"   '(chasinglogic-shell :which-key "run terminal")
    "`"   '(shell-pop :which-key "shell popup")
    "TAB" '(chasinglogic-select-last-frame :which-key "select last frame")
    "m"   '(chasinglogic-projectile-make-command :which-key "make")
+   "d"   'switch-to-buffer
    "w"   '(:keymap evil-window-map :which-key "windows")
    "p"   '(:keymap projectile-command-map :which-key "projectile")
    "q"   '(:keymap chasinglogic-quit-map :which-key "quit")

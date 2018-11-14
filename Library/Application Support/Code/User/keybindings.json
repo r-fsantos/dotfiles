@@ -1,7 +1,7 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
-        "key": "ctrl+'",
+        "key": "cmd+'",
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
@@ -13,16 +13,16 @@
         "command": "editor.action.startFindReplaceAction"
     },
     {
-        "key": "ctrl+n",
+        "key": "cmd+n",
         "command": "explorer.newFile",
         "when": "fileExplorerFocus"
     },
     {
-        "key": "ctrl+n",
+        "key": "cmd+n",
         "command": "extension.advancedNewFile",
     },
     {
-        "key": "ctrl+t",
+        "key": "cmd+t",
         "command": "workbench.action.terminal.focus"
     },
     {
@@ -45,7 +45,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+k ctrl+0",
+        "key": "cmd+k cmd+0",
         "command": "-editor.foldAll",
         "when": "editorTextFocus"
     },

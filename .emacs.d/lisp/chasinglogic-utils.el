@@ -122,7 +122,19 @@ If SYNC provided will run make command synchronously"
   "Open my shell in 'ansi-term'."
   (interactive)
   (ansi-term "/usr/local/bin/zsh" (when (projectile-project-name)
-                                    (concat (projectile-project-name) "-shell"))))
+                                     (concat (projectile-project-name) "-shell"))))
+
+;; when switching to a buffer if it's a shell automatically go to
+;; insert mode
+(setq previous-buffer-name (buffer-name))
+(defun insert-mode-in-term-hook (&rest args)
+  (when (and
+         (string-match-p
+          (regexp-quote "-shell") (buffer-name))
+         (not (eq (buffer-name) previous-buffer-name)))
+    (setq previous-buffer-name (buffer-name))
+    (evil-insert-state)))
+(add-hook 'buffer-list-update-hook 'insert-mode-in-term-hook)
 
 (provide 'chasinglogic-utils)
 

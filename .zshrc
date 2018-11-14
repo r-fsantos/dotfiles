@@ -76,3 +76,5 @@ source $HOME/.bash/sp.bash
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export VIRTUAL_ENV_DISABLE_PROMPT=0
+
+export EDITOR="code --wait"

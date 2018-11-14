@@ -1,7 +1,7 @@
 {
     // Workbench
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Solarized Light",
+    "workbench.colorTheme": "Solarized Dark",
     // "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
     "vsicons.dontShowNewVersionMessage": true,
@@ -70,6 +70,10 @@
         {
             "before": ["<tab>"],
             "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<leader>", "'"],
+            "commands": ["workbench.action.terminal.focus"]
         },
         {
             "before": ["<leader>", "f", "s"],
@@ -210,5 +214,6 @@
     "workbench.activityBar.visible": false,
     "editor.fontLigatures": true,
     "workbench.fontAliasing": "auto",
-    "workbench.panel.defaultLocation": "right"
+    "workbench.panel.defaultLocation": "right",
+    "explorer.confirmDelete": false
 }

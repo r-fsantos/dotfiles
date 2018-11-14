@@ -124,7 +124,9 @@
 
 ;; Font
 (when (display-graphic-p)
-  (set-frame-font "Hack-16" nil t))
+  (if (eq system-type 'darwin)
+      (set-frame-font "Hack-16" nil t)
+    (set-frame-font "Hack-14" nil t)))
 
 ;; auto pair things
 (electric-pair-mode 1)

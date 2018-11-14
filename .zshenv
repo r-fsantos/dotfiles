@@ -25,11 +25,7 @@ fi
 
 
 # Set $TERM
-if [[ $(infocmp | grep 24bit) != "" ]]; then
-  export TERM="xterm-24bits"
-else
-  export TERM="xterm-256color"
-fi
+export TERM="xterm-256color"
 
 export PATH="/usr/local/bin:$PATH:$HMBIN:$GOBIN:$CARGOBIN:$SCRIPTS_DIR"
 export CODE_DIR="$HOME/Code"
@@ -46,10 +42,6 @@ fi
 
 # Disable packer colored output
 export PACKER_NO_COLOR="1"
-
-if [[ -d /usr/share/terminfo ]]; then
-    export TERMINFO='/usr/share/terminfo'
-fi
 
 if [[ -d ~/.cargo ]]; then
     export PATH="$HOME/.cargo/bin:$PATH"

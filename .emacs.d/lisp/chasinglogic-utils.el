@@ -121,8 +121,9 @@ If SYNC provided will run make command synchronously"
 (defun chasinglogic-shell ()
   "Open my shell in 'ansi-term'."
   (interactive)
-  (ansi-term "/usr/local/bin/zsh" (when (projectile-project-name)
-                                     (concat (projectile-project-name) "-shell"))))
+  (ansi-term (executable-find "zsh")
+             (when (projectile-project-name)
+               (concat (projectile-project-name) "-shell"))))
 
 ;; when switching to a buffer if it's a shell automatically go to
 ;; insert mode

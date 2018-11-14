@@ -171,7 +171,6 @@
 ;; my frame management functions
 (require 'chasinglogic-frames)
 (require 'chasinglogic-git)
-(require 'chasinglogic-gui)
 (require 'chasinglogic-ivy)
 (require 'chasinglogic-projectile)
 (require 'chasinglogic-python)

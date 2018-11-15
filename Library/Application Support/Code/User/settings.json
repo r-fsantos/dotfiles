@@ -1,7 +1,7 @@
 {
     // Workbench
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Dracula",
     // "workbench.activityBar.visible": false,
     "explorer.confirmDragAndDrop": false,
     "vsicons.dontShowNewVersionMessage": true,
@@ -41,6 +41,9 @@
     // Terminal
     "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.fontSize": 15,
+    "terminal.integrated.env.osx": {
+        "EDITOR": "code --wait"
+    },
 
     // Vim
     "vim.leader": " ",

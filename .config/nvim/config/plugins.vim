@@ -34,7 +34,8 @@ Plug 'fatih/vim-go', { 'for': 'go' } " Better go support
 Plug 'pangloss/vim-javascript'       " Better Javascript
 
 """ Themes
-Plug 'altercation/vim-colors-solarized', {'as': 'solarized'}
+" Plug 'altercation/vim-colors-solarized', {'as': 'solarized'}
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 """ Easy alignment
 Plug 'junegunn/vim-easy-align'
@@ -49,6 +50,12 @@ let g:go_fmt_command = "goimports"
 if executable("fd")
      let g:ctrlp_user_command = 'fd --type f --hidden --follow --exclude .git'
 end
+
+" Force ALE to use language servers when necessary
+let g:ale_linters = {}
+let g:ale_linters.rust = ['rls']
+let g:ale_linters.cpp = ['clangd']
+let g:ale_rust_rls_toolchain = 'stable' " this is needed, otherwise rls uses nightly toolchain
 
 let g:which_key_map = {
 \   'b': { 'name': '+buffers' },

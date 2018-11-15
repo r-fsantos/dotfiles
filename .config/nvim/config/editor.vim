@@ -19,7 +19,6 @@ set formatoptions+=q  " Allow formatting of comments with gq
 set formatoptions+=n  " recognize numbered lists
 set formatoptions-=t  " No visual wrapping
 set nowrap
-
  
 """ Line numbers
 set number
@@ -44,7 +43,9 @@ set clipboard+=unnamedplus
 set path=$PWD/**
 
 """ Live preview substitution
-set inccommand=nosplit
+if has('nvim')
+    set inccommand=split
+end
 
 """ Intuitive backspacing in insert mode
 set backspace=indent,eol,start
@@ -70,3 +71,7 @@ let g:netrw_altv=1
 set tags=.tags,tags
 
 set encoding=utf-8
+
+""" Case insensitive search by default, unless Capital letter included 
+set ignorecase
+set smartcase

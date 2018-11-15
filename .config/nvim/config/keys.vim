@@ -32,6 +32,7 @@ nmap <Leader>ji :CtrlPTag<CR>
 """ Buffers
 nmap <Leader>bb :CtrlPBuffer<CR>
 nmap <Leader>bd :bdelete<CR>
+nmap <Leader>bD :bdelete!<CR>
 nmap <Leader>bs :tabnew __scratch__<CR>
 
 """ Windows

@@ -9,7 +9,6 @@ augroup END
 """ Terminal stuff
 autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
-autocmd BufEnter,BufWinEnter,WinEnter term://* startinsert
 
 """ Rust CTAGS
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi

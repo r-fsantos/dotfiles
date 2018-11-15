@@ -49,4 +49,14 @@
         "command": "-editor.foldAll",
         "when": "editorTextFocus"
     },
+    {
+        "key": "cmd+enter",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    }
 ]

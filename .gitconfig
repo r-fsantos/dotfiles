@@ -31,3 +31,7 @@
   whereis = branch -a --contains
   l = log --graph --date-order  --pretty=olcolor
 
+[pager]
+	branch = false
+[diff]
+	renameLimit = 4487

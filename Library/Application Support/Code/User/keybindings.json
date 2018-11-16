@@ -22,8 +22,8 @@
         "command": "extension.advancedNewFile",
     },
     {
-        "key": "cmd+t",
-        "command": "workbench.action.terminal.focus"
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal"
     },
     {
         "key": "cmd+k o",

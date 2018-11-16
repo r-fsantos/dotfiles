@@ -17,3 +17,5 @@ colorscheme dracula
 if has('gui_running')
     set guifont=Hack:h16
 end
+
+set shortmess=a

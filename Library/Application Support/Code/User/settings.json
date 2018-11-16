@@ -42,7 +42,8 @@
     "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.env.osx": {
-        "EDITOR": "code --wait"
+        "EDITOR": "code --wait",
+        "VSCODE_TERM": "1",
     },
 
     // Vim
@@ -207,17 +208,17 @@
     "terminal.external.osxExec": "iTerm2.app",
     "terminal.external.linuxExec": "gnome-terminal",
     "terminal.integrated.shell.linux": "/bin/bash",
-    "github.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
     "workbench.activityBar.visible": false,
     "editor.fontLigatures": true,
     "workbench.fontAliasing": "auto",
     "workbench.panel.defaultLocation": "right",
     "explorer.confirmDelete": false,
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    "githubPullRequests.hosts": [
+        {
+            "host": "https://github.com",
+            "username": "oauth",
+            "token": "system"
+        }
+    ]
 }

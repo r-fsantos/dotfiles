@@ -19,6 +19,8 @@ export HMBIN="$HOME/.bin"
 export SCRIPTS_DIR="$HOME/.scripts"
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
+elif [[ -n $VSCODE_TERM ]]; then
+  export EDITOR='code --wait'
 else
   export EDITOR='nvim'
 fi
